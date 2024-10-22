@@ -1,0 +1,133 @@
+﻿<Page x:Class="Configurator.Pages.BrowsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Configurator.Pages"
+      mc:Ignorable="d" xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      d:DesignHeight="650" d:DesignWidth="850"
+      Title="BrowsersPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ui:TextBlock FontTypography="Title" Text="Browsers" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
+
+        <Grid Grid.Row="1" Margin="30,0,30,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ui:CardAction x:Name="btnBrave" Margin="0,0,4,4" Padding="0" VerticalAlignment="Stretch" IsChevronVisible="False" Click="btnBrave_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/brave.png" RenderOptions.BitmapScalingMode="HighQuality" />
+
+                    <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
+                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Brave" TextWrapping="WrapWithOverflow" />
+                        <ui:TextBlock Appearance="Secondary" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Brave is a privacy-focused browser, which automatically blocks most advertisements and website trackers in its default settings." TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Grid>
+            </ui:CardAction>
+
+            <ui:CardAction x:Name="btnChrome" Margin="0,0,4,4" Padding="0" Grid.Column="1" VerticalAlignment="Stretch" IsChevronVisible="False" Click="btnChrome_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/chrome.png" RenderOptions.BitmapScalingMode="HighQuality" />
+
+                    <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
+                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Chrome" TextWrapping="WrapWithOverflow" />
+                        <ui:TextBlock Appearance="Secondary" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Google Chrome is a widely-used web browser developed by Google." TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Grid>
+            </ui:CardAction>
+
+            <ui:CardAction x:Name="btnFirefox" Margin="0,0,4,4" Grid.Row="1" Padding="0" VerticalAlignment="Stretch" IsChevronVisible="False" Click="btnFirefox_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/firefox.png" RenderOptions.BitmapScalingMode="HighQuality" />
+
+                    <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
+                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Firefox" TextWrapping="WrapWithOverflow" />
+                        <ui:TextBlock Appearance="Secondary" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Mozilla Firefox, or simply Firefox, is a free and open source web browser developed by the Mozilla Foundation." TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Grid>
+            </ui:CardAction>
+
+            <ui:CardAction x:Name="btnLibreWolf" Margin="0,0,4,4" Grid.Row="1" Grid.Column="1" Padding="0" VerticalAlignment="Stretch" IsChevronVisible="False" Click="btnLibreWolf_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/librewolf.png" RenderOptions.BitmapScalingMode="HighQuality" />
+
+                    <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
+                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="LibreWolf" TextWrapping="WrapWithOverflow" />
+                        <ui:TextBlock Appearance="Secondary" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="LibreWolf is a free and open-source fork of Firefox, with an emphasis on privacy and security." TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Grid>
+            </ui:CardAction>
+
+            <ui:CardAction x:Name="btnEdge" Margin="0,0,4,4" Grid.Row="2" Padding="0" VerticalAlignment="Stretch" IsChevronVisible="False" Click="btnEdge_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/edge.png" RenderOptions.BitmapScalingMode="HighQuality" />
+
+                    <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
+                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Microsoft Edge" TextWrapping="WrapWithOverflow" />
+                        <ui:TextBlock Appearance="Secondary" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Microsoft Edge is designed to enhance your Bing search experience, providing faster, smarter, and more tailored results." TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Grid>
+            </ui:CardAction>
+
+            <ui:CardAction x:Name="btnUGChrome" Margin="0,0,4,4" Grid.Row="2" Grid.Column="1" Padding="0" VerticalAlignment="Stretch" IsChevronVisible="False" Click="btnUGChrome_Click">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Margin="15,0,0,0" Source="pack://application:,,,/Assets/ugchromium.png" RenderOptions.BitmapScalingMode="HighQuality" />
+
+                    <StackPanel Grid.Column="1" Margin="10,24,24,24" VerticalAlignment="Center">
+                        <ui:TextBlock Margin="0" FontTypography="BodyStrong" Text="Ungoogled Chromium" TextWrapping="WrapWithOverflow" />
+                        <ui:TextBlock Appearance="Secondary" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Text="Ungoogled-Chromium is a free and open-source variant of the Chromium web browser that removes all Google-specific web services." TextWrapping="WrapWithOverflow" />
+                    </StackPanel>
+                </Grid>
+            </ui:CardAction>
+
+            <ui:TextBlock x:Name="txtBlockDownload" Grid.Row="3" FontTypography="Caption"  Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" Margin="5,20,5,5" Visibility="Collapsed" />
+            <ProgressBar x:Name="progBarDownload" Grid.Row="3" Grid.ColumnSpan="2" IsIndeterminate="True" Margin="5,50,5,0" Visibility="Collapsed"/>
+
+        </Grid>
+
+    </Grid>
+</Page>

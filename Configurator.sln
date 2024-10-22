@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35201.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurator", "Configurator\Configurator.csproj", "{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Debug|x64.ActiveCfg = Debug|x64
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Debug|x64.Build.0 = Debug|x64
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Release|x64.ActiveCfg = Release|x64
+		{642A6FE1-5EB9-42BA-AA37-158EC88BECC7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E3D68101-51C6-475B-A9A7-0D9A8F8907A7}
+	EndGlobalSection
+EndGlobal

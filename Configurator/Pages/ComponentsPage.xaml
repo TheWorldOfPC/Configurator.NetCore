@@ -1,0 +1,363 @@
+﻿<Page x:Class="Configurator.Pages.ComponentsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Configurator.Pages"
+      mc:Ignorable="d" xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      d:DesignHeight="1500" d:DesignWidth="800"
+      Title="ComponentsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ui:TextBlock FontTypography="Title" Text="Components" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" Margin="30" />
+
+        <UniformGrid x:Name="containerGrid" Grid.Row="1" Columns="1" Rows="18">
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="PersonAccounts24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Edit Local Account Username" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Edit the 'Administrator' local account username" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+
+                    <ui:Button x:Name="btnEdit" Grid.Column="2" Content="Edit Username" Visibility="Visible" Click="btnEdit_Click">
+                        <ui:Button.Icon>
+                            <ui:SymbolIcon Symbol="Pen24" />
+                        </ui:Button.Icon>
+                    </ui:Button>
+
+                    <StackPanel x:Name="spEditUsername" Orientation="Horizontal" Grid.Column="2" Visibility="Collapsed">
+                        <ui:TextBox x:Name="txtBoxUsername" Grid.Column="2" Width="200" FontSize="14" Height="35"/>
+                        <ui:Button x:Name="btnApplyUsername" Content="Apply Changes" Margin="10,0,0,0" Click="btnApplyUsername_Click" />
+                        <ui:Button x:Name="btnGoBack" Margin="10,0,0,0" Click="btnGoBack_Click" Height="32" >
+                            <ui:Button.Icon>
+                                <ui:SymbolIcon Symbol="EditOff24"/>
+                            </ui:Button.Icon>
+                        </ui:Button>
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="HandWave24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Animations" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off System Animations" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsAnimations" Click="tsAnimations_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="squareHintApps24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Background Apps" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Background Apps" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsBackgroundApps" Click="tsBackgroundApps_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="bluetooth24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Bluetooth" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Bluetooth" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsBluetooth" Click="tsBluetooth_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="clipboard24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Clipboard and Snip 'n Sketch" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Clipboard and Snip 'n Sketch" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsClipboard" Click="tsClipboard_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="xboxController24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="FSO and GameBar" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off FSO and GameBar" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsFSOGameBar" Click="tsFSOGameBar_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="DataBarHorizontal24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Prefetch" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Prefetch" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsPrefetch" Click="tsPrefetch_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="shield24" Filled="True" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Hyper-V and VBS" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Hyper-V and VBS" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsHyperV" Click="tsHyperV_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="WindowDatabase24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Lanman Workstation" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Lanman Workstation" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsLanmanWorkstation" Click="tsLanmanWorkstation_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="NetworkCheck24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Network Discovery" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Network Discovery" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsNetworkDiscovery" Click="tsNetworkDiscovery_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <ui:SymbolIcon Symbol="WeatherMoon24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Notifications" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Notifications" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsNotifications" Click="tsNotifications_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="print24" Filled="True" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+                    
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Print Spooler" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Print Spooler" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsPrintSpooler" Click="tsPrintSpooler_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="Shield24" Filled="True" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="UAC" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off UAC" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsUAC" Click="tsUAC_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="virtualNetwork20" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="VPN" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off VPN" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsVPN" Click="tsVPN_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="Wifi120" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="WiFi" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off WiFi" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsWiFi" Click="tsWiFi_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <ui:SymbolIcon Symbol="LeafTwo24" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="HAGS" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off HAGS" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsHAGS" Click="tsHAGS_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <ui:SymbolIcon Symbol="panelSeparateWindow20" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Old Alt + Tab" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Old Alt + Tab" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsOldAltTab" Click="tsOldAltTab_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10"/>
+                </Grid>
+            </Border>
+
+            <Border Grid.Row="1" Padding="16" Margin="10,0,10,5" Background="{ui:ThemeResource CardBackgroundFillColorDefaultBrush}" BorderBrush="{ui:ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" Height="80" CornerRadius="8">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <ui:SymbolIcon Symbol="panelSeparateWindow20" FontSize="30" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" VerticalAlignment="Center" Margin="0,0,10,0" />
+
+                    <StackPanel Grid.Column="1" Margin="5">
+                        <ui:TextBlock FontTypography="BodyStrong" Text="Old Context Menu" Foreground="{ui:ThemeResource TextFillColorPrimaryBrush}" />
+                        <ui:TextBlock FontTypography="Caption" Text="Toggle On or Off Old Context Menu" Foreground="{ui:ThemeResource TextFillColorSecondaryBrush}" />
+                    </StackPanel>
+                    <ui:ToggleSwitch x:Name="tsOldContextMenu" Click="tsOldContextMenu_Click" Grid.Column="2" VerticalAlignment="Top" OffContent="Disabled" OnContent="Enabled" Margin="10" />
+                </Grid>
+            </Border>
+        </UniformGrid>
+
+    </Grid>
+</Page>

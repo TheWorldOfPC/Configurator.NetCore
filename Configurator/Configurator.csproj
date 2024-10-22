@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\100.jpg" />
+    <None Remove="Assets\Apps.png" />
+    <None Remove="Assets\brave.png" />
+    <None Remove="Assets\chrome.png" />
+    <None Remove="Assets\driverbooster.png" />
+    <None Remove="Assets\edge.png" />
+    <None Remove="Assets\firefox.png" />
+    <None Remove="Assets\icon.png" />
+    <None Remove="Assets\librewolf.png" />
+    <None Remove="Assets\MenuBar.png" />
+    <None Remove="Assets\nvcleanstall.png" />
+    <None Remove="Assets\nvslimmer.png" />
+    <None Remove="Assets\radeonslimmer.png" />
+    <None Remove="Assets\sdi.png" />
+    <None Remove="Assets\ugchromium.png" />
+    <None Remove="Assets\Updates.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks.SimpleIcons" Version="5.0.0" />
+    <PackageReference Include="WPF-UI" Version="3.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\100.jpg" />
+    <Resource Include="Assets\Apps.png" />
+    <Resource Include="Assets\brave.png" />
+    <Resource Include="Assets\chrome.png" />
+    <Resource Include="Assets\driverbooster.png" />
+    <Resource Include="Assets\edge.png" />
+    <Resource Include="Assets\firefox.png" />
+    <Resource Include="Assets\icon.png" />
+    <Resource Include="Assets\librewolf.png" />
+    <Resource Include="Assets\MenuBar.png" />
+    <Resource Include="Assets\nvcleanstall.png" />
+    <Resource Include="Assets\nvslimmer.png" />
+    <Resource Include="Assets\radeonslimmer.png" />
+    <Resource Include="Assets\sdi.png" />
+    <Resource Include="Assets\ugchromium.png" />
+    <Resource Include="Assets\Updates.png" />
+  </ItemGroup>
+
+</Project>
